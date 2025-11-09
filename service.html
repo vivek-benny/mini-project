@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Garage - Services</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f5f5f5;
+      overflow-x: hidden;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #ff4b2b;
+      padding: 15px 30px;
+      color: white;
+    }
+
+    nav .logo {
+      font-size: 1.8rem;
+      font-weight: bold;
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 20px;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-size: 1rem;
+    }
+
+    .services-title {
+      text-align: center;
+      padding: 40px 20px 10px;
+      font-size: 2.2rem;
+      color: #333;
+    }
+
+    .services-scroll-wrapper {
+      display: flex;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;
+      padding: 40px 20px;
+      gap: 40px;
+    }
+
+    .services-scroll-wrapper::-webkit-scrollbar {
+      display: none;
+    }
+
+    .service-item {
+      flex: 0 0 auto;
+      scroll-snap-align: center;
+      background: white;
+      border-radius: 15px;
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+      width: 340px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+
+    .service-item.active {
+      transform: scale(1.08);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    }
+
+    .service-item img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 12px;
+      margin-bottom: 15px;
+    }
+
+    .service-item h3 {
+      color: #ff4b2b;
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+      text-align: center;
+    }
+
+    .service-item p {
+      font-size: 1rem;
+      line-height: 1.5;
+      color: #555;
+      margin-bottom: 20px;
+      text-align: center;
+      word-wrap: break-word;
+    }
+
+    .book-btn {
+      background: #ff4b2b;
+      color: white;
+      padding: 10px 20px;
+      font-size: 1rem;
+      border: none;
+      border-radius: 25px;
+      text-decoration: none;
+      transition: background 0.3s ease;
+      margin-top: auto;
+    }
+
+    .book-btn:hover {
+      background: #e04123;
+    }
+
+    footer {
+      background: #222;
+      color: white;
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    .footer-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      margin-bottom: 20px;
+    }
+
+    .footer-container h2 {
+      margin-bottom: 10px;
+    }
+
+    .footer-container p,
+    .footer-container a {
+      color: #ccc;
+      font-size: 0.95rem;
+      text-decoration: none;
+    }
+
+    .footer-bottom {
+      border-top: 1px solid #444;
+      padding-top: 10px;
+      font-size: 0.85rem;
+    }
+
+    @media (max-width: 480px) {
+      .service-item {
+        width: 280px;
+      }
+
+      nav ul {
+        flex-direction: column;
+        gap: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="logo">GARAGE</div>
+    <ul>
+      <li><a href="index.php">Home</a></li>
+      <li><a href="#">Services</a></li>
+      <li><a href="booking.php">Booking</a></li>
+    </ul>
+  </nav>
+
+  <h2 class="services-title">Our Car Services</h2>
+
+  <div class="services-scroll-wrapper">
+    <div class="service-item">
+      <img src="images/Car Wash.jpg" alt="Car Washing">
+      <h3>Car Washing</h3>
+      <p>Interior and exterior deep cleaning using foam wash, vacuuming, and polishing for a spotless, like-new look.</p>
+      <a href="service-details.html?service=car-washing" class="book-btn">More About</a>
+
+    </div>
+    <div class="service-item">
+      <img src="images/tire change.jpg" alt="Tyre Change">
+      <h3>Tyre Change</h3>
+      <p>Professional tyre replacement, wheel balancing, and alignment to ensure optimal driving comfort and safety.</p>
+      <a href="service-details.html?service=tyre-change" class="book-btn">More About</a>
+
+    </div>
+    <div class="service-item">
+      <img src="images/Air pressure.jpg" alt="Air Filling">
+      <h3>Air Filling</h3>
+      <p>Tyres filled with correct air pressure or nitrogen to extend tyre life and improve mileage and grip.</p>
+     <a href="service-details.html?service=air-filling" class="book-btn">More About</a>
+
+    </div>
+    <div class="service-item">
+      <img src="images/car painting.jpg" alt="Scratch Removal">
+      <h3>Scratch Removal</h3>
+      <p>Advanced paint restoration and dent removal for restoring your car’s body finish to original factory quality.</p>
+     <a href="service-details.html?service=scratch-removal" class="book-btn">More About</a>
+
+    </div>
+    <div class="service-item">
+      <img src="images/car polishing.jpg" alt="Polishing">
+      <h3>Polishing & Waxing</h3>
+      <p>Enhance your car’s shine with long-lasting wax protection and a swirl-free polish using premium products.</p>
+    <a href="service-details.html?service=polishing-waxing" class="book-btn">More About</a> 
+    </div>
+    <div class="service-item">
+      <img src="images/engine service.jpg" alt="Engine Cleaning">
+      <h3>Engine Cleaning</h3>
+      <p>Degreasing and safe cleaning of engine components to reduce buildup and identify potential issues early.</p>
+      <a href="service-details.html?service=engine-cleaning" class="book-btn">More About</a>
+
+    </div>
+    <div class="service-item">
+      <img src="images/oil changing.jpg" alt="Oil Change">
+      <h3>Oil Change</h3>
+      <p>Oil and filter replacement using high-grade engine oil that suits your car’s make and model for optimal performance.</p>
+    <a href="service-details.html?service=oil-change" class="book-btn">More About</a>
+
+    </div>
+    <div class="service-item">
+      <img src="images/AC.jpg" alt="AC Service">
+      <h3>AC Service</h3>
+      <p>Complete AC check-up including gas refill, compressor check, filter cleaning, and leak test for perfect cooling.</p>
+     <a href="service-details.html?service=ac-service" class="book-btn">More About</a>
+
+    </div>
+    <div class="service-item">
+      <img src="images/Battery replacement.jpg" alt="Battery">
+      <h3>Battery Replacement</h3>
+      <p>Diagnostic and replacement service with warranty-backed batteries from trusted brands to avoid starting issues.</p>
+      <a href="service-details.html?service=battery-replacement" class="book-btn">More About</a>
+
+    </div>
+    <div class="service-item">
+      <img src="images/General inspection.jpg" alt="Inspection">
+      <h3>General Inspection</h3>
+      <p>Comprehensive vehicle check-up covering brakes, fluids, lights, filters, and other critical systems for safety.</p>
+      <a href="service-details.html?service=general-inspection" class="book-btn">More About</a>
+
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-container">
+      <div class="contact-info">
+        <h2>Contact Us</h2>
+        <p>123 Garage St., Auto City, AC 12345</p>
+        <p>Email: support@garage.com</p>
+        <p>Phone: +1 (555) 123-4567</p>
+      </div>
+      <div class="social-media">
+        <h2>Follow Us</h2>
+        <p>
+          <a href="#">Facebook</a> |
+          <a href="#">Twitter</a> |
+          <a href="#">Instagram</a>
+        </p>
+      </div>
+    </div>
+    <p class="footer-bottom">&copy; 2025 Garage. All rights reserved.</p>
+  </footer>
+
+  <script>
+    const wrapper = document.querySelector('.services-scroll-wrapper');
+    const items = document.querySelectorAll('.service-item');
+
+    function highlightActiveItem() {
+      const center = wrapper.scrollLeft + wrapper.offsetWidth / 2;
+
+      items.forEach(item => {
+        const itemCenter = item.offsetLeft + item.offsetWidth / 2;
+        const distance = Math.abs(center - itemCenter);
+        const threshold = item.offsetWidth / 2;
+
+        if (distance < threshold) {
+          item.classList.add('active');
+        } else {
+          item.classList.remove('active');
+        }
+      });
+    }
+
+    wrapper.addEventListener('scroll', highlightActiveItem);
+    window.addEventListener('load', highlightActiveItem);
+  </script>
+</body>
+</html>
